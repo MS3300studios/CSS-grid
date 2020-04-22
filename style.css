@@ -1,0 +1,101 @@
+body{
+    background: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;    
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo"
+    "date"
+    "news"
+    "nav"
+    "adress";
+    background: #272327;
+}
+#logo{
+    background: url(logo.jpg);
+    height: 163px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #25222b;
+    grid-area: logo;
+}
+aside{
+    background: #f4e8dc;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 18px;
+    grid-area: date;
+}
+section{
+    padding: 0 20px;
+    grid-area: news;
+    background: #fff;
+}
+.news:last-child{
+    border-bottom: none;
+}
+.news h2{
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.news p{
+    font-size: 16px;
+    margin: 8px 0 12px;
+}
+.news .date{
+    font-weight: 700;
+}
+.news{
+    border-bottom: 4px solid #ccc;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding: 30px 0;
+    text-align: center;
+    font-weight: bold;
+}
+nav{
+    grid-area: nav;
+}
+#accessibility{
+    background:#f1e4d6 ;
+}
+#code{
+    background:#e8ab3b ;
+}
+#contact{
+    background:#694703 ;
+}
+#frequently{
+    background:#caa077 ;
+}
+footer{
+    color: #fff;
+    background: #272327;
+    padding: 30px 20px 10px 20px;
+    grid-area: adress;
+}
+.footertitle{
+    font-weight: 700;
+}
+@media(min-width: 500px){
+    main{
+        width: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;    
+        grid-template-rows: auto 160px auto;
+        grid-template-areas: 
+        "date date"
+        "news logo"
+        "news nav"
+        "adress adress";
+    }
+}
